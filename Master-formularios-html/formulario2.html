@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form1{
+            display: flex;
+                }
+    </style>
+    <title>Formularios 2</title>
+</head>
+<body>
+    <div class="form1">
+    <h4>Formularios Desplegables</h4>
+    <form action="pagina.aspx" method="post">
+        <label for="ciudad">Elige una ciudad</label>
+        <select id="ciudad" name="ciudad">
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="sevilla">Sevilla</option>
+            <option value="valencia">Valencia</option>
+            <option value="bilbao">Bilbao</option>
+            <option value="toledo">Toledo</option>
+        </select>
+        <input type="submit" value="Enviar">
+        </form>
+
+        <h4>Formularios Multiples</h4>
+    <form action="pagina.aspx" method="post">
+        <label for="frutas">Elige una fruta</label>
+        <select id="frutas" name="frutas" multiple>
+            <option value="pera">Pera</option>
+            <option value="manzana">Manzana</option>
+            <option value="platano">Platano</option>
+            <option value="kiwi">Kiwi</option>
+            <option value="naranja">Naranja</option>
+            <option value="melocoton">Melocoton</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    </div>
+    
+    <h4>Formularios Listas con grupos</h4>
+    <form method="get">
+        <label for="frutas">Elige una fruta</label> 
+        <select name="frutas" name="s1" id="frutas">
+            <optgroup label="Frutas tipo 1">
+                <option value="manzana">Manzana</option>
+                <option value="platano">Platano</option>
+                <option value="melocoton">Melocoton</option>
+            </optgroup>
+            <optgroup label="Frutas tipo 2">
+                <option value="kiwi">Kiwi</option>
+                <option value="naranja">Naranja</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4>Formulario Textareas</h4>
+    <form method="get">
+        <label for="message">Choose a car:</label>
+        <textarea name="message" id="message" rows="10" cols="30"></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
