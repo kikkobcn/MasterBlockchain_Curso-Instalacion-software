@@ -5,20 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .container{
-            display:grid;
-            height: 100vh;
-            grid:   'header header header'
-                    'nav main aside'
-                    'footer footer footer'
-                    ;
-            grid-template-columns: 10vh 1fr 10vh;
-            grid-template-rows: 10vh 1fr 5vh;
-        }
-        .container > div{
-            padding: 10px;
-            border: 1px solid black;
-        }
         .header{
             grid-area: header;
         }
@@ -33,17 +19,112 @@
         }
         .footer{
             grid-area: footer;
+        }   
+        
+        .header, .main, .nav, .navtablet, .aside, .footer {
+            border:1px solid green;
+            padding: 10px;
+        }
+        .mainTablet{
+                    display:none;
+                }
+                .navtablet{
+                display:none;
+            }
+        .aside{
+                display:none;
+            }
+            .nav{
+                display:nonek;
+            }
+            body{
+                display:grid;
+                grid: 'header'
+                        'main'
+                        'footer';
+            
+                grid-template-rows: 10vh 80vh 10vh;
+            }
+
+            @media (min-width:768px) {
+                .mainTablet{
+                    display:block;
+                }
+                .aside{
+                display:none;
+            }
+            .navtablet{
+                display:block;
+            }
+            .nav{
+                display:none;
+            }
+            body{
+                display:grid;
+                grid: 'header header'
+                        'navtablet main'
+                        'footer footer';
+                grid-template-columns: 15vw auto;
+                grid-template-rows: 10vh 80vh 10vh;
+            }
+            }
+
+        @media (min-width:1200px) {
+            .aside{
+                display:none;
+            }
+            .mainTablet{
+                    display:none;
+                }
+            .navtablet{
+                display:none;
+            }
+            .nav{
+                display:block;
+            }
+            body{
+                display:grid;
+                grid: 'header header'
+                        'nav main'
+                        'footer footer';
+                grid-template-columns: 10vw auto;
+                grid-template-rows: 10vh 80vh 10vh;
+            }
+        }
+        @media (min-width:1400px) {
+            .aside{
+                display:block;
+            }
+            .mainTablet{
+                    display:none;
+                }
+            .navtablet{
+                display:none;
+            }
+            .nav{
+                display:block;
+            }
+            body{
+                display:grid;
+                grid: 'header header header'
+                        'nav main aside'
+                        'footer footer footer';
+                grid-template-columns: 10vw auto 10vw;
+                grid-template-rows: 10vh 80vh 10vh;
+            }
         }
     </style>
     <title>Pruebas CSS GRID</title>
 </head>
 <body>
-    <div class="container">
-    <div class="header">Header</div>
-    <div class="nav">Nav</div>
-    <div class="main">Main</div>
-    <div class="aside">Aside</div>
-    <div class="footer">Footer</div>
-</div>
+    <header class="header">header</header>
+    <main class="main">main
+        <div class="mainTablet">solo para tablet</div>
+    </main>
+    <nav class="nav">nav</nav>
+    <nav class="navtablet">navtablet</nav>
+    <aside class="aside">aside</aside>
+    <footer class="footer">footer</footer>
+    
 </body>
 </html>
