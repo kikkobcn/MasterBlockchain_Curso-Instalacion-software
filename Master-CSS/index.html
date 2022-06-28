@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display:flex;
+            border: 2px solid rgb(244, 101, 101);
+            height: 60vh; 
+            align-items:center;
+            justify-content:space-between;
+            flex-direction:row;
+        }
+        .container > div {
+            display:flex;
+            flex-direction:column;
+            padding:40px;
+            width:150px;
+            border:2px solid yellow;
+            justify-content:space-around;
+        }
+        .container > div > div{
+            border: 2px solid black;
+            padding:10px;
+        }
+    </style>
+    <title>Pruebas CSS</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div>a</div>
+            <div>b</div>
+        </div>
+        <div>-2-</div>
+        <div>-3-</div>
+        <div>-4-</div>
+    </div>
+</body>
+</html>
