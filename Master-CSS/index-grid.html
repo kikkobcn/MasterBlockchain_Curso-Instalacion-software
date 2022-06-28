@@ -5,39 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .container {
-            display:flex;
-            gap: 2px;
-            border: 2px solid rgb(244, 101, 101);
-            height: 60vh; 
-            align-items:center;
-            justify-content:space-between;
-            flex-direction:row;
+        .container{
+            display:grid;
+            height: 100vh;
+            grid:   'header header header'
+                    'nav main aside'
+                    'footer footer footer'
+                    ;
+            grid-template-columns: 10vh 1fr 10vh;
+            grid-template-rows: 10vh 1fr 5vh;
         }
-        .container > div {
-            display:flex;
-            flex-direction:column;
-            padding:40px;
-            width:150px;
-            border:2px solid yellow;
-            justify-content:space-around;
+        .container > div{
+            padding: 10px;
+            border: 1px solid black;
         }
-        .container > div > div{
-            border: 2px solid black;
-            padding:10px;
+        .header{
+            grid-area: header;
+        }
+        .main{
+            grid-area: main;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .aside{
+            grid-area: aside;
+        }
+        .footer{
+            grid-area: footer;
         }
     </style>
-    <title>Pruebas CSS</title>
+    <title>Pruebas CSS GRID</title>
 </head>
 <body>
     <div class="container">
-        <div>
-            <div>a</div>
-            <div>b</div>
-        </div>
-        <div>-2-</div>
-        <div>-3-</div>
-        <div>-4-</div>
-    </div>
+    <div class="header">Header</div>
+    <div class="nav">Nav</div>
+    <div class="main">Main</div>
+    <div class="aside">Aside</div>
+    <div class="footer">Footer</div>
+</div>
 </body>
 </html>
