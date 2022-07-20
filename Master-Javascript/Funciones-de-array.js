@@ -14,7 +14,7 @@ console.log(result); //devuelve el Array  result["exuberant", "destruction", "pr
 //en el metoto map() que recorre cada elemento del array original.
 var numbers = [1, 5, 10,45];
 var doubles = numbers.map(function(x) {
-   return x * 2;
+    return x * 2;
 });
 console.log(doubles);  // nuevo array doubles es[2, 10, 20, 30] mientra que numbers sigue igual
 
@@ -26,7 +26,7 @@ console.log(roots);     //// nuevo array roots es[2, 10, 20, 30] mientra que num
 
 
 //FILTER + MAP
-var z = numbers.filter((num) =>  //con filter sacamos los datos que cumplan con la 
+var z = numbers.filter((nxum) =>  //con filter sacamos los datos que cumplan con la 
     num % 2 == 0).map((num) => {   // funcion(num%2==0 ) o sea que sean divisible por 2 y con el map
         return num * num;           // construyo un nuevo array con los datos obtenudos del filter 
     });                             // mutli`plicados por si mismos.

@@ -7,7 +7,7 @@ function mediaEdades(edades) {
     }
     var media = suma / edades.lenght;
     return media;
-}
+}                                                                                                                                                                                                                                           
 console.log(mediaEdades(edades));   
 
 
